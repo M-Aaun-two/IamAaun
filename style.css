@@ -25,10 +25,12 @@
   --text-color: hsl(var(--hue), 2%, 66%);
   --body-color: hsl(var(--hue), 100%, 1%);
   --container-color: hsl(var(--hue), 2%, 10%);
-  --conic-gradient: conic-gradient(from 150deg at 50% 45%,
-                  hsl(var(--hue), 80%, 20%) 0deg,
-                  hsl(var(--hue), 80%, 48%) 140deg,
-                  hsl(var(--hue), 80%, 20%) 360deg);
+  --conic-gradient: conic-gradient(
+    from 150deg at 50% 45%,
+    hsl(var(--hue), 80%, 20%) 0deg,
+    hsl(var(--hue), 80%, 48%) 140deg,
+    hsl(var(--hue), 80%, 20%) 360deg
+  );
 
   /*========== Font and typography ==========*/
   /*.5rem = 8px | 1rem = 16px ...*/
@@ -38,9 +40,9 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1rem;
-  --normal-font-size: .938rem;
-  --small-font-size: .813rem;
-  --smaller-font-size: .75rem;
+  --normal-font-size: 0.938rem;
+  --small-font-size: 0.813rem;
+  --smaller-font-size: 0.75rem;
 
   /*========== Font weight ==========*/
   --font-regular: 400;
@@ -60,8 +62,8 @@
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.25rem;
     --normal-font-size: 1rem;
-    --small-font-size: .875rem;
-    --smaller-font-size: .813rem;
+    --small-font-size: 0.875rem;
+    --smaller-font-size: 0.813rem;
   }
 }
 
@@ -96,7 +98,10 @@ textarea {
   outline: none;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
   color: var(--white-color);
   font-weight: var(--font-semi-bold);
 }
@@ -130,7 +135,7 @@ img {
   padding-block: 2rem 3rem;
 }
 
-.section__title {
+.section-title {
   font-size: var(--h2-font-size);
   text-align: center;
   margin-bottom: 2rem;
@@ -141,12 +146,12 @@ img {
 }
 
 /*=============== NAV ===============*/
-.nav{
+.nav {
   position: fixed;
   bottom: 1.5rem;
   left: 0;
   right: 0;
-  background-color: hsla(0, 0%, 98%, .1);
+  background-color: hsla(0, 0%, 98%, 0.1);
   width: 88%;
   margin-inline: auto;
   backdrop-filter: blur(16px);
@@ -156,13 +161,13 @@ img {
   z-index: var(--z-fixed);
 }
 
-.nav__list{
+.nav__list {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.nav__links{
+.nav__links {
   width: 2.5rem;
   height: 2.5rem;
   background-color: transparent;
@@ -171,15 +176,14 @@ img {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  transition: background-color .6s;
+  transition: background-color 0.6s;
 }
 
 /* Active link */
 
-
 /*=============== HOME ===============*/
 /*===== PERSON =====*/
-.person{
+.person {
   position: relative;
   background: var(--conic-gradient);
   height: 415px;
@@ -189,21 +193,21 @@ img {
   overflow: hidden;
 }
 
-.person-img{
+.person-img {
   width: 250px;
   position: absolute;
   justify-self: center;
   align-self: flex-end;
 }
 
-.person-data{
+.person-data {
   align-self: flex-end;
-  background-color: hsla(0, 0%, 1%, .1);
+  background-color: hsla(0, 0%, 1%, 0.1);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   padding: 1.5rem 1rem;
   border-radius: 1.5rem;
-  border: 2px solid hsla(0, 0%, 100%, .1);
+  border: 2px solid hsla(0, 0%, 100%, 0.1);
 }
 
 .person-name {
@@ -211,18 +215,20 @@ img {
   margin-bottom: 1rem;
 }
 
-.person-button{
+.person-button {
   display: grid;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
   grid-template-columns: repeat(2, 1fr);
 }
 
 .person-button .button {
-  padding: .75rem 0;
+  padding: 0.75rem 0;
 }
 
 /*===== INFO =====*/
-.info, .about, .skills {
+.info,
+.about,
+.skills {
   background-color: var(--container-color);
   padding: 2rem 1.5rem;
   border-radius: 2rem;
@@ -230,7 +236,8 @@ img {
 
 .info-circle {
   width: 2rem;
-  height: 2rem;background-color: var(--first-color);
+  height: 2rem;
+  background-color: var(--first-color);
   border-radius: 50%;
 }
 
@@ -242,11 +249,10 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  column-gap: .5rem;
+  column-gap: 0.5rem;
 }
 
-.info-img{
-  
+.info-img {
   background: var(--conic-gradient);
   height: 180px;
   border-radius: 2rem;
@@ -255,11 +261,11 @@ img {
   overflow: hidden;
 }
 
-.info-image{
+.info-image {
   width: 140px;
   justify-self: center;
   align-self: flex-end;
-  transform:  translateY(-1.5rem);
+  transform: translateY(-1.5rem);
 }
 
 .info-description {
@@ -294,7 +300,9 @@ img {
   border-radius: 50%;
   display: grid;
   place-items: center;
-  transition: background-color .4s, color .4s;
+  transition:
+    background-color 0.4s,
+    color 0.4s;
 }
 
 .about-link:hover {
@@ -307,7 +315,7 @@ img {
   height: 180px;
   border-radius: 2rem;
   display: grid;
-  overflow: hidden ;
+  overflow: hidden;
 }
 
 .about-image {
@@ -318,7 +326,7 @@ img {
 
 .about-note {
   font-size: var(--small-font-size);
-  margin-block: 1rem 2rem ;
+  margin-block: 1rem 2rem;
 }
 
 .about .button {
@@ -326,17 +334,17 @@ img {
 }
 
 /*===== SKILLS =====*/
-.skills-title{
+.skills-title {
   font-size: var(--h2-font-size);
 }
 
-.skills-item{
+.skills-item {
   width: 1.5rem;
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
 .skills-item:hover {
-  transform: translateY(-.25rem);
+  transform: translateY(-0.25rem);
 }
 
 .skills-items {
@@ -347,7 +355,7 @@ img {
   margin-block: 1.5rem;
 }
 
-.skills-description{
+.skills-description {
   font-size: var(--small-font-size);
 }
 
@@ -360,11 +368,11 @@ img {
   font-weight: var(--font-semi-bold);
   padding: 1.25rem 2.5rem;
   border-radius: 4rem;
-  transition: background-color .4s;
+  transition: background-color 0.4s;
 }
 
 .button-black {
-  background-color: var(--black-color)
+  background-color: var(--black-color);
 }
 
 .button:hover {
@@ -377,20 +385,20 @@ img {
   border-radius: 2rem;
 }
 
-.projects-image{
+.projects-image {
   display: block;
   overflow: hidden;
   border-radius: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
-.projects-img {
+.project-img {
   transition: transform .4s;
 }
 
 .projects-name {
   font-size: var(--h3-font-size);
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
 }
 
 .projects-description {
@@ -398,53 +406,68 @@ img {
   margin-bottom: 1.5rem;
 }
 
-.projects-skill{
+.projects-skill {
   width: 1rem;
-  transition: transform .4s;
+  transition: transform 0.4s;
 }
 
-.projects-skill:hover{
-  transform: translateY(-.25rem);
+.projects-skill:hover {
+  transform: translateY(-0.25rem);
 }
 
 .projects-skills {
   width: max-content;
   height: 34px;
   background-color: var(--black-color);
-  padding-inline: .75rem;
+  padding-inline: 0.75rem;
   display: flex;
   align-items: center;
-  column-gap: .75rem;
+  column-gap: 0.75rem;
   border-radius: 4rem;
   margin-bottom: 1.5rem;
 }
 
-/*=============== SERVICES ===============*/
+.projects-button {
+  color: var(--white-color);
+  display: inline-flex;
+  align-items: center;
+  column-gap: 0.5rem;
+  transition: color 0.4s;
+}
 
+.projects-button i {
+  font-size: 1.25rem;
+}
+
+.projects-button span {
+  font-weight: var(--font-medium);
+}
+
+.projects-button:hover {
+  color: var(--text-color);
+}
+
+.projects-card:hover .project-img {
+  transform: scale(1.2);
+}
+
+/*=============== SERVICES ===============*/
 
 /*=============== EXPERIENCE ===============*/
 
-
 /*=============== CONTACT ===============*/
-
 
 /*=============== FOOTER ===============*/
 
-
 /*=============== SCROLL BAR ===============*/
-
 
 /*=============== SCROLL UP ===============*/
 
-
 /* Show Scroll Up */
-
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
 
-
 /* For medium devices */
-
 
 /* For large devices */
