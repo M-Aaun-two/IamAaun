@@ -497,17 +497,16 @@ img {
 
 /*=============== EXPERIENCE ===============*/
 .education-container {
-    row-gap:  2rem;
+    row-gap: 2rem;
 }
 
 .education-card {
-    display:  grid;
-    row-gap:  1rem;
+    display: grid;
+    row-gap: 1rem;
 }
 
 .education-name {
-    font-size:  var(--h2-font-size);
-
+    font-size: var(--h2-font-size);
 }
 
 .education-data {
@@ -518,21 +517,64 @@ img {
 
 .education-lang {
     font-size: var(--h3-font-size);
-    margin-bottom:  .5rem;
+    margin-bottom: 0.5rem;
 }
 
 .education-date {
-    display:  block;
-    font-size:  var(--smaller-font-size);
+    display: block;
+    font-size: var(--smaller-font-size);
     margin-bottom: 1rem;
 }
 
 .education-description {
     color: var(--text-color);
-    font-size:  smaller;
+    font-size: smaller;
 }
 
 /*=============== CONTACT ===============*/
+.contact-group,
+.contact-form {
+    gap: 1rem;
+}
+
+.contact-form {
+    position: relative;
+}
+
+.contact-input {
+    background-color: var(--container-color);
+    padding: 1.25rem;
+    border-radius: 4rem;
+    color: white;
+}
+
+.contact-input::placeholder {
+    color: var(--text-color);
+}
+
+.contact-input:autofill {
+    transition:
+        background-color 6000s,
+        color 6000s;
+}
+
+.contact-area {
+    height: 10rem;
+    resize: none;
+    border-radius: 1.5rem;
+}
+
+.contact-button {
+    margin-top: 1.5rem;
+    cursor: pointer;
+}
+
+.contact-message {
+    position: absolute;
+    left: 0;
+    bottom: 4.5rem;
+    font-size: var(--smaller-font-size);
+}
 
 /*=============== FOOTER ===============*/
 
