@@ -496,6 +496,41 @@ img {
 }
 
 /*=============== EXPERIENCE ===============*/
+.education-container {
+    row-gap:  2rem;
+}
+
+.education-card {
+    display:  grid;
+    row-gap:  1rem;
+}
+
+.education-name {
+    font-size:  var(--h2-font-size);
+
+}
+
+.education-data {
+    background-color: var(--container-color);
+    padding: 1.5rem;
+    border-radius: 1.5rem;
+}
+
+.education-lang {
+    font-size: var(--h3-font-size);
+    margin-bottom:  .5rem;
+}
+
+.education-date {
+    display:  block;
+    font-size:  var(--smaller-font-size);
+    margin-bottom: 1rem;
+}
+
+.education-description {
+    color: var(--text-color);
+    font-size:  smaller;
+}
 
 /*=============== CONTACT ===============*/
 
