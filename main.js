@@ -53,3 +53,29 @@ const scrollActive = () =>{
     })
 }
 window.addEventListener('scroll', scrollActive)
+
+const sr = ScrollReveal({
+    origin: "top",
+    distance: "60px",
+    duration: 2500,
+    delay: 600,
+    reset: true,
+
+
+});
+
+sr.reveal(`.person`)
+sr.reveal(`.info`, {origin: "left", delay: 1200})
+sr.reveal(`.skills`, {origin: "left", delay: 1400})
+sr.reveal(`.about`, {origin: "right", delay: 1600})
+sr.reveal(`.projects-card, .services-card, .education-card`, { interval: 100 });
+
+sr.reveal(`#contact-name`, {origin: "left", delay: 400})
+sr.reveal(`#contact-email`, {origin: "right", delay: 600})
+sr.reveal(`.contact-area`, {origin: "bottom", delay: 800})
+sr.reveal(`.contact-button`, {origin: "top", delay: 200})
+
+sr.reveal(`.footer-content`, {origin: "left", delay: 600})
+sr.reveal(`.footer-social`, {origin: "right", delay: 600})
+
+sr.reveal(`.footer-copy`, {origin: "bottom", delay: 800})
