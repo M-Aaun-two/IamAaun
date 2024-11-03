@@ -665,13 +665,13 @@ img {
     bottom: -50%;
     right: 1rem;
     font-size: 1.25rem;
-    padding: 6px;
+    padding: 10px;
     background-color: hsla(0, 0%, 98%, 0.1);
     color: var(--white-color);
     display: inline-flex;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
-    border-radius: .5rem;
+    border-radius: 50%;
     z-index: var(--z-tooltip);
     transition: bottom .4s, transform 0.4s;
 }
@@ -684,6 +684,66 @@ img {
 .show-scroll {
     bottom: 8rem;
 }
+
+/*========== Color Choicer ==========*/
+.color-choicer {
+    position: fixed;
+    bottom: 8rem;
+    left: 1rem;
+    font-size: 1.25rem;
+    padding: 10px;
+    background-color: hsla(0, 0%, 98%, 0.1);
+    color: var(--white-color);
+    display: inline-flex;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-radius: 50%;
+    z-index: var(--z-tooltip);
+    transition: bottom 0.4s, transform 0.4s;
+}
+
+.color-choicer:hover {
+    transform: translateY(-0.5rem);
+}
+
+
+
+.theme-popup {
+    position: fixed;
+    bottom: 2rem;
+    left: 1rem;
+    padding: 1rem;
+    background-color: var(--container-color);
+    color: var(--white-color);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    z-index: var(--z-fixed);
+}
+
+.theme-popup h3 {
+    margin: 0;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.color-options {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.color-btn {
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */

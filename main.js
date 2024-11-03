@@ -79,3 +79,25 @@ sr.reveal(`.footer-content`, {origin: "left", delay: 600})
 sr.reveal(`.footer-social`, {origin: "right", delay: 600})
 
 sr.reveal(`.footer-copy`, {origin: "bottom", delay: 800})
+
+/*========== Color Choicer ==========*/
+document.addEventListener("DOMContentLoaded", () => {
+    const colorChoicer = document.getElementById("color-choicer");
+    const themePopup = document.getElementById("theme-popup");
+    const colorButtons = document.querySelectorAll(".color-btn");
+
+    // Toggle theme pop-up visibility
+    colorChoicer.addEventListener("click", (event) => {
+        event.preventDefault();
+        themePopup.style.display =
+            themePopup.style.display === "flex" ? "none" : "flex";
+    });
+
+    // Change the theme color
+    colorButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            const hueValue = button.getAttribute("data-hue");
+            document.documentElement.style.setProperty("--hue", hueValue);
+        });
+    });
+});
